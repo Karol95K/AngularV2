@@ -1,0 +1,6 @@
+nav > a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px lightskyblue solid;
+  }

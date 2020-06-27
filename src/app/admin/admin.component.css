@@ -1,0 +1,12 @@
+.wrapper {
+    border: 1px gray solid;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  nav > a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px lightskyblue solid;
+  }

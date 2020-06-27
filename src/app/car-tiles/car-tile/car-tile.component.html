@@ -1,0 +1,8 @@
+<div class="tile">
+    <div>Name: {{carName}}</div>
+    <div>Price: {{price}}</div>
+    <div *ngIf="limit > 0">Limit: {{limit}}km</div>
+    <div><a routerLink="{{id}}">Szczegóły</a></div>
+  
+    <div [class.disabled]="available !== true" class="button">Wypożycz</div>
+  </div>

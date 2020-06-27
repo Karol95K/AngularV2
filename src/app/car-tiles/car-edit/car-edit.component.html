@@ -1,0 +1,30 @@
+<p>car-edit works!</p>
+
+<div *ngIf="car">
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>
+        Name:
+        <input [(ngModel)]="car.carName" name="name" required="required" type="text">
+      </label>
+    </div>
+    <div>
+      <label>
+        Price:
+        <input [(ngModel)]="car.price" name="price" type="text">
+      </label>
+    </div>
+    <div>
+      <label>
+        Available:
+        <select [(ngModel)]="car.available" name="available">
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </label>
+    </div>
+    <button type="submit">Zapisz</button>
+  </form>
+
+</div>
