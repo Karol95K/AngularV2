@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../car';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CarService } from 'src/app/car.service';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-car-details',
@@ -13,7 +15,7 @@ export class CarDetailsComponent implements OnInit {
   carId: number;
   car: Car;
 
-  constructor(private route: ActivatedRoute, private carService: CarService) {
+  constructor(private location: Location,private router: Router, private route: ActivatedRoute, private carService: CarService) {
   }
 
   ngOnInit(): void {
@@ -22,6 +24,15 @@ export class CarDetailsComponent implements OnInit {
       this.carId = +params.id;
       this.car = this.carService.findById(this.carId);
     });
+  }
+ 
+  //lepsza backClicked()
+  // goBackToCars (){
+  //   this.router.navigate(['cars']);
+  // }
+
+  backClicked (): void{
+    this.location.back();
   }
 
 }

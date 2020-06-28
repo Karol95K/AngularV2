@@ -16,6 +16,8 @@ import { CarEditComponent } from './car-tiles/car-edit/car-edit.component';
 import { CarDetailsComponent } from './car-tiles/car-details/car-details.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -31,11 +33,13 @@ import { FormsModule } from '@angular/forms';
     CarEditComponent,
     CarDetailsComponent,
     CustomerListComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

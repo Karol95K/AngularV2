@@ -7,6 +7,7 @@ import {AdminCarListComponent} from '../admin/admin-car-list/admin-car-list.comp
 import {AdminCustomerListComponent} from '../admin/admin-customer-list/admin-customer-list.component';
 import {CarDetailsComponent} from '../car-tiles/car-details/car-details.component';
 import {CarEditComponent} from '../car-tiles/car-edit/car-edit.component';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 const routing: Routes = [
   {path: '', redirectTo: '/cars', pathMatch: 'full'},
@@ -14,14 +15,14 @@ const routing: Routes = [
   {path: 'cars/:id', component: CarDetailsComponent},
   {path: 'cars/:id/edit', component: CarEditComponent},
   {path: 'customers', component: CustomerListComponent},
-  {
-    path: 'admin', component: AdminComponent,
+  {path: 'admin', component: AdminComponent,
     children: [
       {path: '', redirectTo: 'cars', pathMatch: 'full'},
       {path: 'cars', component: AdminCarListComponent},
       {path: 'customers', component: AdminCustomerListComponent},
     ]
-  }
+  },
+  {path: "**",component:PageNotFoundComponent}
 ];
 
 @NgModule({

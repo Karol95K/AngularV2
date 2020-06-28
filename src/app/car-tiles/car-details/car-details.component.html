@@ -3,7 +3,9 @@ Car details
 <div *ngIf="car">
   <a routerLink="edit">Edytuj pojazd {{car.carName}}</a>
 
-  <div>Name: {{car.id}}</div>
+  <div>Id: {{car.id}}</div>
   <div>Name: {{car.carName}}</div>
-  <div>Name: {{car.price}}</div>
+  <div>Price: {{car.price}}</div>
+  
+  <div><button (click)="backClicked()">Powrót</button></div>
 </div>

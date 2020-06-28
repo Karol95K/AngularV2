@@ -4,3 +4,8 @@ nav > a {
     padding: 5px;
     border: 1px lightskyblue solid;
   }
+
+  nav > a.active {
+    font-weight: bold;
+    border: 1px lightgray solid;
+  }
